@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<Title>Sign Up</Title>
+				<meta charset="UTP-8">
+				<meta placeholder="author" content="Gerald Escabarte">
+				<meta placeholder="keyboards" content="AA_Q4">
+				<meta placeholder="revised" content="05/31/2024">
+		</head>
+		
+		<body>
+			<center>
+				</br></br></br>
+					<div class="inputoutput_info">
+						<form id="registrationInfo">
+							<h1 style="font-size: 75px; color: white;">Sign Up</h1></br>
+							<input id="username" class="text" type="text" placeholder=" Username:" required></br>
+							<input id="password" class="text" type="password" placeholder=" Password:" required></br>
+							<input id="email" class="text" type="email" placeholder=" Email:" required></br></br>
+								<select class="text" id="gender" required>
+									<option value="" disabled selected>Select Gender</option>
+									<option value="Male">Male</option>
+									<option value="Female">Female</option>
+									<option value="Prefer not to say">Prefer not to say</option>
+								</select>
+							</br></br>
+							<textarea id="interest" class="text" type="text" name="Interests" rows="8" cols="30" placeholder="Your Interests"></textarea>
+							</br></br>
+							<input style="font-size: 30px; padding: 4px;" type ="submit" value = "Submit form">
+						</form>
+					</div>
+					</br>
+					</br>
+			</center>
+		</body>
+		
+		<script>
+    document.getElementById('registrationInfo').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var email = document.getElementById('email').value;
+        var gender = document.getElementById('gender').value;
+        var interests = document.getElementById('interest').value;
+
+        var userData = { username: username, password: password, email: email, gender: gender, interests: interests };
+        localStorage.setItem(email, JSON.stringify(userData));
+
+        alert('Registration successful! Please login with your credentials.');
+        window.location.href = 'Login_Page.html';
+    });
+</script>
+
+		<style>
+		body{
+		background-image: url('Biomolecule.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		overflow-x: hidden;
+		}
+		*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		input, textarea, select{
+		border-width: 3px;
+		}
+		.inputoutput_info{
+		background: #333333;
+		text-align: center;
+		padding: 10px;
+		width: 600px;
+		box-shadow: 10px 10px;
+		border-width: 3px;
+		height: auto;
+		}
+		.text{
+		font-size: 24px;
+		color: black;
+		}
+		</style>
+	</html>

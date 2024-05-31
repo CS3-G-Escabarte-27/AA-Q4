@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<Title>Login</Title>
+				<meta charset="UTP-8">
+				<meta placeholder="author" content="Gerald Escabarte">
+				<meta placeholder="keyboards" content="AA_Q4">
+				<meta placeholder="revised" content="05/31/2024">
+		</head>
+		
+		<body>
+			<center>
+				</br></br></br>
+					<div class="inputoutput_info">
+						<form id="loginInfo">
+							</br></br></br>
+							<h1 style="font-size: 75px; color: white;">Login</h1></br></br></br>
+							<input id="email" class="text" type="email" placeholder=" Email:" ></br>
+							<input id="password" class="text" type="password" placeholder=" Password:" ></br>
+								</select>
+							</br></br>
+							<input style="font-size: 30px; padding: 4px;" type ="submit" value = "Login">
+						</form>
+						</br></br>
+						<a style="font-size: 24px; color: white; text-decoration: none;" href="Sign_Up_Page.html">Have not made an account yet?</br>Sign Up now!</a>
+						</br></br></br>
+					</div>
+			</center>
+		</body>
+		
+		<script>
+    		document.getElementById('loginInfo').addEventListener('submit', function(event) {
+        	event.preventDefault();
+
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        var userData = JSON.parse(localStorage.getItem(email));
+
+        if (userData && userData.password === password) {
+            var username = userData.username;
+            /*document.cookie = "username=" + username;
+		Failed attempt at cookies */
+            window.location.href = 'Home_Page_Logout.html';
+        } else {
+            alert('Invalid email or password. Please try again.');
+        }
+    });
+</script>
+
+		<style>
+		body{
+		background-image: url('Biomolecule.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		overflow-x: hidden;
+		}
+		*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		input, textarea, select{
+		border-width: 3px;
+		}
+		.inputoutput_info{
+		background: #333333;
+		text-align: center;
+		padding: 10px;
+		width: 525px;
+		box-shadow: 10px 10px;
+		border-width: 3px;
+		height: auto;
+		}
+		.text{
+		font-size: 24px;
+		color: black;
+		}
+		</style>
+	</html>

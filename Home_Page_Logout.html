@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<Title>Home</Title>
+				<meta charset="UTP-8">
+				<meta placeholder="author" content="Gerald Escabarte">
+				<meta placeholder="Assesment" content="AA_Q4">
+				<meta placeholder="revised" content="05/30/2024">
+	 </head>
+	<body>
+		<div class="navbar">
+			<img class="account" src="Pfp.png">
+			<p class="Navtext"><a href="Logout_Page.html" id="loginusername">Logout</a>  |  <a href="Home_Page_Logout.html">Home</a>  |  <a href="About_Page_Logout.html">				About</a>  |  <a href="Sources_Page_Logout.html">Sources</a></p>
+		</div>
+			<center>
+			</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+				<div class="ContentBox">
+					<h1 class="Title">Biomolecules</h1>
+					<p style="font-size: 25px;" class="biocontent">• What exactly are Biomolecules?</p>
+					<p class="biocontent">Biomolecules are the most essential organic molecules, which are involved in the maintenance and metabolic processes of living organisms. These non-living molecules are the actual foot-soldiers of the battle of sustenance of life. They range from small molecules such as primary and secondary metabolites and hormones to large macromolecules like proteins, nucleic acids, carbohydrates, lipids etc.
+					</p>
+					</br></br>
+					<p style="font-size: 25px;" class="biocontent">• How did these molecules come to be?</p>
+					<p class="biocontent">Volcanic hydrothermal settings on early Earth constitute one of the possible habitats for the formation of biomolecules from inorganic precursors. Metal minerals like iron, nickel and cobalt, including their sulfides, are abundant in Earth´s crust and could act as catalytic surfaces in the aqueous environment. Over the millenias, these biomolecules have constantly been evolving.
+					</br></br>
+					<a href="Evolution_Biomolecule_Logout.html" class="biocontent" style="text-decoration: underline;">Evolution of Human Biomolecules</a>
+					</p>
+					</br></br></br></br>
+				</div>
+				</br>
+			</center>
+	<script>
+/* Failed attempt at cookies
+	window.onload = function() {
+        var username = getCookie("username");
+        if (username) {
+            document.getElementById("usernameDisplay").textContent = username;
+        }
+    };
+
+    function getCookie(cookieName) {
+        var name = cookieName + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var cookieArray = decodedCookie.split(';');
+        for (var i = 0; i < cookieArray.length; i++) {
+            var cookie = cookieArray[i].trim();
+            if (cookie.indexOf(name) === 0) {
+                return cookie.substring(name.length, cookie.length);
+            }
+        }
+        return "";
+    } */
+</script>
+	</body>
+
+	<style>
+		body{
+		background-image: url('Biomolecule.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		overflow-x: hidden;
+		}
+		.navbar{
+		width: 100%;
+		height: 75px;
+		padding: 28px 32px;
+		align-items: center;
+		left: 0;
+		top: 0;
+		display: flex;
+		background-color: rgba(51, 51, 51, 1.0);
+		position: fixed;
+		}
+		.Navtext{
+		font-size: 40px;
+		color: white;
+		}
+		a, p, h1, h2, h3, h4, h5, h6{
+		color: white;
+		text-decoration: none;
+		}
+		.account{
+		max-width: 100px;
+		height: auto;
+		}
+		.Title{
+		font-size: 100px;
+		}
+		.ContentBox{
+		background-color: rgba(51, 51, 51, 1.0);
+		width: 1200px;
+		height: auto;
+		padding-top: 1px;
+		}
+		.biocontent{
+		font-size: 18px;
+		font-family: "Verdana", "Courier New", monospace;
+		width: 1000px;
+		text-align: justify;
+		}
+	</style>
+</html>
